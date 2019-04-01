@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JSON - Syntax</title>
+	<meta charset="UTF-8">
+	</head>
+		<body>
+		<h1>JSON - Syntax</h1>
+		<p>How To Create A JavaScript Object Array.</p>
+		<p id="demo"></p>
+	<script>
+	var employees =
+	[
+		{
+			"firstName":"Syed",
+			"lastName":"Bilal"
+		},
+		{
+			"firstName":"Wasif",
+			"lastName":"Rehman"
+		},
+		{
+			"firstName":"Muhammad",
+			"lastName":"Omar"
+		}
+	];
+			<!--employees[0].firstName = "Sadia";-->
+			document.getElementById("demo").innerHTML = employees[0].firstName + " " + employees[0].lastName;
+	</script>
+		</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>JSON - HTTP</title>
+	<meta charset="UTF-8">
+	</head>
+		<body>
+		<h1>JSON - HTTP</h1>
+		<div id="id01"></div>
+		<script>
+		var xhttp = new XMLHttpRequest();
+		var url = "myTutorials.txt";
+		xhttp.onreadystatechange = function()
+		{
+			if(xhttp.readyState == 4 && xhttp.status == 200)
+			{
+				var myArr = JSON.parse(xhttp.responseText);
+				myFunction(myArr);
+			}
+		};
+		xhttp.open("GET",url, true);
+		xhttp.send();
+		function myFunction(arr)
+			{
+				var out = "";
+				var i;
+				for(i=0;i< arr.length;i++)
+			{
+				out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a><br>';
+			}
+				document.getElementById("id01").innerHTML = out;
+			};
+			myFunction(Array);
+	
+	</script>
+		</body>
+</html>
